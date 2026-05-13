@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Page Not Found | Bethel Pawn</title>
+<meta name="robots" content="noindex, follow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Source+Sans+3:wght@300;400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/style.css">
+<style>
+.err-page { min-height: 70vh; display:flex; align-items:center; justify-content:center; text-align:center; padding:60px 24px; background:var(--navy-deepest); }
+.err-code { font-family:'Oswald',sans-serif; font-size:120px; font-weight:700; color:var(--gold); line-height:1; opacity:0.15; }
+.err-inner { position:relative; margin-top:-60px; }
+.err-title { font-family:'Oswald',sans-serif; font-size:36px; color:#fff; text-transform:uppercase; letter-spacing:0.05em; }
+.err-sub { font-size:16px; color:var(--gray); margin:12px 0 32px; font-weight:300; }
+.err-links { display:flex; gap:12px; justify-content:center; flex-wrap:wrap; }
+</style>
+<link rel="manifest" href="/manifest.json">
+<meta name="theme-color" content="#0F1F24">
+
+  <!-- ══ SOCIAL / TWITTER ══ -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@bethelpawn">
+  <meta name="twitter:title" content="Page Not Found | Bethel Pawn">
+  <meta name="twitter:description" content="Bethel Pawn — Bethel, Ohio">
+  <meta name="twitter:image" content="https://www.bethelpawn.com/images/hero-bg.jpg">
+  <meta property="og:image" content="https://www.bethelpawn.com/images/hero-bg.jpg">
+  <meta property="og:image:width" content="1400">
+  <meta property="og:image:height" content="933">
+  <meta property="og:image:alt" content="Bethel Pawn — 119 W. Plane St, Bethel, Ohio">
+
+  <!-- ══ PERFORMANCE ══ -->
+  <link rel="dns-prefetch" href="//fonts.googleapis.com">
+  <link rel="dns-prefetch" href="//fonts.gstatic.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- ══ ICONS & PWA ══ -->
+  <link rel="icon" type="image/svg+xml" href="/images/bethel-pawn-logo.svg">
+  <link rel="apple-touch-icon" href="/images/bethel-pawn-logo.svg">
+  <meta name="theme-color" content="#0F1F24">
+  <meta name="msapplication-TileColor" content="#0F1F24">
+  <meta name="application-name" content="Bethel Pawn">
+  <meta name="apple-mobile-web-app-title" content="Bethel Pawn">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+</head>
+<body>
+<main id="main-content" role="main">
+<!-- ADA: Skip Navigation -->
+<a class="skip-to-main" href="#main-content">Skip to main content</a>
+
+<div class="err-page">
+  <div>
+    <div class="err-code">404</div>
+    <div class="err-inner">
+      <div class="err-title">Page Not Found</div>
+      <p class="err-sub">The page you're looking for has moved or doesn't exist.</p>
+      <div class="err-links">
+        <a href="/index.html" class="btn-gold">Go to Homepage</a>
+        <a href="/sell.html" class="btn-outline">Sell an Item</a>
+        <a href="/contact.html" class="btn-outline">Contact Us</a>
+      </div>
+      <p style="margin-top:32px;font-size:14px;color:var(--gray);">
+        📞 <a href="tel:5134274705" aria-label="Call Bethel Pawn at (513) 427-4705" style="color:var(--gold);">(513) 427-4705</a> &nbsp;·&nbsp;
+        119 W. Plane St, Bethel, OH &nbsp;·&nbsp; Tue–Fri 10–5 · Sat 10–2
+      </p>
+    </div>
+  </div>
+</div>
+</main>
+<script src="/js/main.js" defer></script>
+
+<!-- ══════════════════════════════════════════════════════════════════
+     FACEBOOK MESSENGER CHAT BUBBLE
+     To update for a new client:
+       1. Replace YOUR_PAGE_ID below with the client's Facebook Page ID
+          (Find it at: facebook.com/[pagename]/about → Page ID at bottom)
+       2. Replace the themeColor if needed
+     For Bethel Pawn: Page name is BethelPawn
+     ══════════════════════════════════════════════════════════════════ -->
+<div id="fb-root"></div>
+<div id="fb-customer-chat" class="fb-customerchat"
+  attribution="biz_inbox"
+  page_id="YOUR_PAGE_ID"
+  theme_color="#C8A24A"
+  logged_in_greeting="Hi! Have a question about buying, selling, or pawning? We&#39;re happy to help."
+  logged_out_greeting="Hi! Have a question about buying, selling, or pawning? Send us a message and we&#39;ll get right back to you."
+  greeting_dialog_display="hide"
+  greeting_dialog_delay="5">
+</div>
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({ xfbml: true, version: 'v18.0' });
+  };
+  (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+</script>
+
+</body>
+</html>

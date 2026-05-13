@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Bethel Pawn shop inventory. Visit us at 119 W. Plane St, Bethel, OH or call (513) 427-4705.">
+<title>Shop Our Inventory | Bethel Pawn | Bethel, OH</title>
+<link rel="stylesheet" href="/css/style.css">
+<link rel="manifest" href="/manifest.json">
+<meta name="theme-color" content="#0F1F24">
+</head>
+<body>
+<main id="main-content" role="main">
+<!-- ADA: Skip Navigation -->
+<a class="skip-to-main" href="#main-content">Skip to main content</a>
+
+<p style="padding:60px;text-align:center;color:#C8962A;font-family:Oswald,sans-serif;font-size:24px;">
+  Shop Inventory — Coming Soon
+</p>
+</main>
+<script src="/js/main.js"></script>
+
+<!-- ══════════════════════════════════════════════════════════════════
+     FACEBOOK MESSENGER CHAT BUBBLE
+     To update for a new client:
+       1. Replace YOUR_PAGE_ID below with the client's Facebook Page ID
+          (Find it at: facebook.com/[pagename]/about → Page ID at bottom)
+       2. Replace the themeColor if needed
+     For Bethel Pawn: Page name is BethelPawn
+     ══════════════════════════════════════════════════════════════════ -->
+<div id="fb-root"></div>
+<div id="fb-customer-chat" class="fb-customerchat"
+  attribution="biz_inbox"
+  page_id="YOUR_PAGE_ID"
+  theme_color="#C8A24A"
+  logged_in_greeting="Hi! Have a question about buying, selling, or pawning? We&#39;re happy to help."
+  logged_out_greeting="Hi! Have a question about buying, selling, or pawning? Send us a message and we&#39;ll get right back to you."
+  greeting_dialog_display="hide"
+  greeting_dialog_delay="5">
+</div>
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({ xfbml: true, version: 'v18.0' });
+  };
+  (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+</script>
+
+</body>
+</html>
