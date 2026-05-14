@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- ============================================================
+     TEMPLATE SWAP CHECKLIST — do these before anything else
+     1. Page title (line below)
+     2. Meta description
+     3. og:title and og:description
+     4. Canonical URL
+     5. Schema JSON (business name, phone, address)
+     6. CSS variables (colors — section below)
+     7. Logo text in nav (search: STORE NAME)
+     8. Footer business name, tagline, about text
+     9. Footer copyright line
+     10. All phone numbers (search: PHONE)
+     11. All addresses (search: ADDRESS)
+     12. Hours (search: HOURS)
+     13. FFL number — remove entirely if not a firearms dealer
+     14. "Site by Pawn Gorillas" credit in footer — keep or swap
+     ============================================================ -->
+
+<title>PAGE TITLE | STORE NAME | CITY, STATE</title>
+<meta name="description" content="PAGE DESCRIPTION — include primary keyword and location. Keep under 160 characters.">
+<meta property="og:title" content="PAGE TITLE | STORE NAME">
+<meta property="og:description" content="Short page description for social sharing.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://DOMAIN.com/PAGENAME.html">
+<link rel="canonical" href="https://DOMAIN.com/PAGENAME.html">
+
+<!-- Schema Markup — tells Google this is a pawn shop -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "PawnShop",
+  "name": "STORE NAME",
+  "alternateName": "LEGAL ENTITY NAME",
+  "url": "https://DOMAIN.com",
+  "telephone": "+1PHONENUMBER",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "STREET ADDRESS",
+    "addressLocality": "CITY",
+    "addressRegion": "STATE",
+    "postalCode": "ZIP",
+    "addressCountry": "US"
+  },
+  "openingHours": ["Tu-Fr 10:00-17:00", "Sa 10:00-14:00"],
+  "description": "BRIEF BUSINESS DESCRIPTION"
+}
+</script>
+
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+/* ============================================================
+   BRAND VARIABLES — change these 6 lines to rebrand the site
+   ============================================================ */
+:root {
+  --navy: #0d1b2a;         /* Main dark background */
+  --navy2: #0f2033;        /* Secondary background (sections, nav) */
+  --navy3: #162840;        /* Tertiary background (cards, inputs) */
+  --gold: #c8922a;         /* Primary accent color */
+  --gold2: #d4a843;        /* Hover/lighter accent */
+  --brand-red: #cc2222;    /* Logo second word color + nav phone bg */
+
+  /* These rarely change — adjust only if needed */
+  --white: #ffffff;
+  --light: #e8e8e8;
+  --text: #b0b8c4;
+}
+/* ============================================================
+   END BRAND VARIABLES
+   ============================================================ */
+
+/* BASE RESET */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Open Sans', sans-serif; background: var(--navy); color: var(--white); overflow-x: hidden; }
+a { text-decoration: none; color: inherit; }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); border: 0; }
+
+/* ============================================================
+   TEMPLATE BLOCK — TOP BAR
+   ============================================================ */
+.topbar { background: #080f1a; padding: 8px 0; font-size: 13px; border-bottom: 1px solid rgba(200,146,42,0.3); }
+.topbar-inner { max-width: 1280px; margin: 0 auto; padding: 0 20px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
+.topbar-left { display: flex; align-items: center; gap: 20px; flex-wrap: wrap; }
+.topbar-left span { color: var(--light); }
+.topbar-right { display: flex; gap: 10px; }
+.btn-quote { background: transparent; color: var(--gold); border: 1px solid var(--gold); padding: 6px 16px; font-size: 12px; font-family: 'Oswald', sans-serif; letter-spacing: 1px; text-transform: uppercase; transition: all 0.2s; display: inline-block; }
+.btn-quote:hover { background: var(--gold); color: var(--navy); }
+.btn-call { background: var(--gold); color: var(--navy); padding: 6px 18px; font-size: 12px; font-family: 'Oswald', sans-serif; letter-spacing: 1px; text-transform: uppercase; font-weight: 700; transition: all 0.2s; display: inline-block; }
+.btn-call:hover { background: var(--gold2); }
+
+/* ============================================================
+   TEMPLATE BLOCK — NAV
+   ============================================================ */
+nav { background: var(--navy2); border-bottom: 2px solid var(--gold); position: sticky; top: 0; z-index: 100; }
+.nav-inner { max-width: 1280px; margin: 0 auto; padding: 0 20px; display: flex; align-items: stretch; }
+.logo-wrap { display: flex; align-items: center; padding: 10px 20px 10px 0; border-right: 1px solid rgba(255,255,255,0.1); margin-right: 10px; }
+.logo-sub { font-size: 10px; color: #aaa; letter-spacing: 0.5px; }
+.logo-main { font-family: 'Oswald', sans-serif; font-size: 28px; font-weight: 700; color: var(--white); line-height: 1; }
+.logo-main span { color: var(--brand-red); }
+.nav-links { display: flex; align-items: stretch; flex: 1; }
+.nav-item { position: relative; display: flex; align-items: center; }
+.nav-item > a, .nav-item > button { padding: 20px 14px; font-family: 'Oswald', sans-serif; font-size: 14px; letter-spacing: 1px; text-transform: uppercase; color: var(--white); cursor: pointer; white-space: nowrap; display: flex; align-items: center; gap: 4px; transition: color 0.2s; border-bottom: 3px solid transparent; margin-bottom: -2px; background: none; border-top: none; border-left: none; border-right: none; }
+.nav-item:hover > a, .nav-item:hover > button, .nav-item.active > a { color: var(--gold); border-bottom-color: var(--gold); }
+.dd { display: none; position: absolute; top: 100%; left: 0; background: #0a1520; border-top: 2px solid var(--gold); min-width: 220px; z-index: 200; box-shadow: 0 8px 24px rgba(0,0,0,0.6); }
+.nav-item:hover .dd { display: block; }
+.dd a { display: block; padding: 11px 20px; font-family: 'Oswald', sans-serif; font-size: 13px; letter-spacing: 0.8px; text-transform: uppercase; color: var(--light); border-bottom: 1px solid rgba(255,255,255,0.06); transition: all 0.2s; }
+.dd a:hover { color: var(--gold); padding-left: 26px; }
+.dd-cta { color: var(--gold) !important; }
+.nav-phone { margin-left: auto; display: flex; align-items: center; background: var(--brand-red); padding: 0 18px; font-family: 'Oswald', sans-serif; font-size: 15px; font-weight: 600; letter-spacing: 1px; }
+.nav-phone:hover { background: #aa1111; }
+
+/* ============================================================
+   SHARED SECTION STYLES
+   ============================================================ */
+section { padding: 80px 20px; }
+.si { max-width: 1280px; margin: 0 auto; }
+.eye { font-family: 'Oswald', sans-serif; font-size: 12px; letter-spacing: 3px; text-transform: uppercase; color: var(--gold); margin-bottom: 10px; }
+.st { font-family: 'Oswald', sans-serif; font-size: clamp(30px,4vw,46px); font-weight: 700; text-transform: uppercase; color: var(--white); line-height: 1.05; }
+.st .gd { color: var(--gold); }
+.gd { color: var(--gold); }
+.bar { width: 50px; height: 3px; background: var(--gold); margin: 14px 0 26px; }
+.bar-c { width: 50px; height: 3px; background: var(--gold); margin: 14px auto 36px; }
+.btn-p { background: var(--gold); color: var(--navy); padding: 14px 30px; font-family: 'Oswald', sans-serif; font-size: 15px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; border: none; cursor: pointer; transition: all 0.2s; display: inline-block; }
+.btn-p:hover { background: var(--gold2); }
+.btn-og { background: transparent; color: var(--gold); padding: 13px 28px; font-family: 'Oswald', sans-serif; font-size: 14px; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; border: 2px solid var(--gold); display: inline-block; transition: all 0.2s; }
+.btn-og:hover { background: var(--gold); color: var(--navy); }
+
+/* PAGE HERO (used on all inner pages) */
+.page-hero { position: relative; min-height: 300px; display: flex; align-items: flex-end; overflow: hidden; }
+.ph-bg { position: absolute; inset: 0; background-image: url('HERO-IMAGE-URL'); background-size: cover; background-position: center; opacity: 0.85; }
+.ph-ov { position: absolute; inset: 0; background: linear-gradient(to right, rgba(8,15,26,0.82) 50%, rgba(8,15,26,0.1)); }
+.ph-content { position: relative; max-width: 1280px; margin: 0 auto; padding: 40px 20px 60px; width: 100%; }
+.breadcrumb { font-family: 'Oswald', sans-serif; font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: rgba(255,255,255,0.45); margin-bottom: 14px; }
+.breadcrumb a { color: var(--gold); }
+.breadcrumb span { margin: 0 8px; }
+.ph-content h1 { font-family: 'Oswald', sans-serif; font-size: clamp(36px,5vw,64px); font-weight: 700; text-transform: uppercase; color: var(--white); line-height: 0.95; }
+.ph-sub { font-family: 'Oswald', sans-serif; font-size: 15px; letter-spacing: 2px; text-transform: uppercase; color: var(--text); margin-top: 12px; }
+
+/* FORM ELEMENTS */
+.qform { display: flex; flex-direction: column; gap: 14px; }
+.frow { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.fg { display: flex; flex-direction: column; gap: 6px; }
+.fl { font-family: 'Oswald', sans-serif; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); }
+.fi, .fs, .fta { background: rgba(255,255,255,0.06); border: 1px solid rgba(200,146,42,0.3); color: var(--white); padding: 12px 14px; font-size: 14px; font-family: 'Open Sans', sans-serif; width: 100%; transition: border 0.2s; outline: none; }
+.fi:focus, .fs:focus, .fta:focus { border-color: var(--gold); }
+.fs option { background: #0a1520; color: var(--white); }
+.fta { resize: vertical; min-height: 90px; }
+.bsub { background: var(--gold); color: var(--navy); padding: 15px 30px; font-family: 'Oswald', sans-serif; font-size: 15px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; border: none; cursor: pointer; transition: all 0.2s; width: 100%; }
+.bsub:hover { background: var(--gold2); }
+
+/* CTA BAND */
+.cta-band { background: var(--gold); padding: 50px 20px; text-align: center; }
+.cta-band h2 { font-family: 'Oswald', sans-serif; font-size: clamp(24px,4vw,40px); font-weight: 700; text-transform: uppercase; color: var(--navy); margin-bottom: 10px; }
+.cta-band p { font-size: 15px; color: rgba(13,27,42,0.75); margin-bottom: 28px; }
+.btn-dark { background: var(--navy); color: var(--white); padding: 14px 28px; font-family: 'Oswald', sans-serif; font-size: 15px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; border: none; cursor: pointer; transition: all 0.2s; display: inline-block; margin: 0 6px; }
+.btn-dark:hover { background: #080f1a; }
+
+/* ============================================================
+   TEMPLATE BLOCK — FOOTER
+   ============================================================ */
+footer { background: #040a10; border-top: 2px solid var(--gold); padding: 50px 20px 0; }
+.fi3 { max-width: 1280px; margin: 0 auto; }
+.fg2 { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px; padding-bottom: 40px; }
+.fl2 { font-family: 'Oswald', sans-serif; font-size: 26px; font-weight: 700; color: var(--white); margin-bottom: 4px; }
+.fl2 span { color: var(--brand-red); }
+.ftag { font-size: 11px; letter-spacing: 1px; text-transform: uppercase; color: var(--gold); margin-bottom: 12px; }
+.fab { font-size: 13px; color: var(--text); line-height: 1.6; margin-bottom: 16px; }
+.fsoc { display: flex; gap: 10px; margin-top: 4px; }
+.sb2 { width: 36px; height: 36px; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 14px; transition: all 0.2s; color: var(--light); }
+.sb2:hover { background: var(--gold); color: var(--navy); }
+.fc h4 { font-family: 'Oswald', sans-serif; font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); margin-bottom: 14px; padding-bottom: 8px; border-bottom: 1px solid rgba(200,146,42,0.3); }
+.fc ul { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+.fc ul li a { font-size: 13px; color: var(--text); transition: color 0.2s; }
+.fc ul li a:hover { color: var(--gold); }
+.fbot { border-top: 1px solid rgba(255,255,255,0.08); padding: 16px 0; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px; }
+.fbot p { font-size: 12px; color: rgba(255,255,255,0.35); }
+.fbr { display: flex; gap: 24px; align-items: center; flex-wrap: wrap; }
+.ffl-txt { font-size: 12px; color: rgba(255,255,255,0.35); }
+.fcr { font-size: 12px; color: rgba(255,255,255,0.35); }
+.fcr a { color: var(--gold); }
+
+/* RESPONSIVE */
+@media(max-width: 900px) { .nav-links { display: none; } .fg2 { grid-template-columns: 1fr 1fr; } .frow { grid-template-columns: 1fr; } }
+@media(max-width: 500px) { .fg2 { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+
+<!-- ============================================================
+     TEMPLATE BLOCK START — TOP BAR & NAV
+     Swap: PHONE, ADDRESS, HOURS, STORE NAME, LEGAL NAME
+     Nav links: update filenames if page structure changes
+     ============================================================ -->
+<div class="topbar">
+  <div class="topbar-inner">
+    <div class="topbar-left">
+      <span>📍 ADDRESS, CITY, STATE ZIP</span>
+      <span>📞 PHONE</span>
+      <span>🕐 HOURS</span>
+    </div>
+    <div class="topbar-right">
+      <a href="index.html#quote" class="btn-quote">Get a Quote</a>
+      <a href="tel:PHONENUMBER" class="btn-call">Call Now</a>
+    </div>
+  </div>
+</div>
+
+<nav role="navigation" aria-label="Main navigation">
+  <div class="nav-inner">
+    <div class="logo-wrap">
+      <a href="index.html" aria-label="STORE NAME Home">
+        <div class="logo-sub">LEGAL ENTITY NAME</div>
+        <!-- Logo: first word white, second word brand-red -->
+        <div class="logo-main">STORE <span>NAME</span></div>
+      </a>
+    </div>
+    <div class="nav-links">
+      <div class="nav-item"><a href="index.html">Home</a></div>
+      <div class="nav-item">
+        <button aria-haspopup="true">Pawning ▾</button>
+        <div class="dd">
+          <a href="vault-howpawning.html">How Pawning Works</a>
+          <a href="sell.html">What We Accept</a>
+          <a href="vault-howpawning.html">Pawn Terms &amp; Rates</a>
+          <a href="vault.html">Redeem Your Item</a>
+          <a href="index.html#quote" class="dd-cta">→ Start a Pawn</a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <button aria-haspopup="true">Sell an Item ▾</button>
+        <div class="dd">
+          <a href="sell-tools.html">Sell Tools</a>
+          <a href="sell-electronics.html">Sell Electronics</a>
+          <a href="sell-firearms.html">Sell a Firearm</a>
+          <a href="sell-instruments.html">Sell Musical Instruments</a>
+          <a href="index.html#quote" class="dd-cta">→ Get an Offer</a>
+        </div>
+      </div>
+      <div class="nav-item"><a href="sell-firearms.html">Firearms</a></div>
+      <div class="nav-item"><a href="sell.html">Shop Inventory</a></div>
+      <div class="nav-item">
+        <button aria-haspopup="true">The Pawn Vault ▾</button>
+        <div class="dd">
+          <a href="vault.html">Pawn Vault Home</a>
+          <a href="vault-howpawning.html">How Pawning Works</a>
+          <a href="vault-bestitems.html">Best Items to Pawn</a>
+          <a href="vault-gold.html">Gold &amp; Precious Metals</a>
+          <a href="vault-video.html">Video Library</a>
+        </div>
+      </div>
+      <div class="nav-item"><a href="about.html">About</a></div>
+    </div>
+    <a href="tel:PHONENUMBER" class="nav-phone" aria-label="Call us">📞 PHONE</a>
+  </div>
+</nav>
+<!-- ============================================================
+     TEMPLATE BLOCK END — TOP BAR & NAV
+     ============================================================ -->
+
+
+<!-- ============================================================
+     PAGE HERO — swap image URL and text per page
+     ============================================================ -->
+<section class="page-hero" aria-label="Page hero">
+  <div class="ph-bg" role="img" aria-label="DESCRIBE IMAGE"></div>
+  <div class="ph-ov" aria-hidden="true"></div>
+  <div class="ph-content">
+    <div class="breadcrumb"><a href="index.html">Home</a><span>›</span>PAGE NAME</div>
+    <h1>PAGE HEADLINE <span class="gd">GOLD PART</span></h1>
+    <div class="ph-sub">SUPPORTING SUBHEADLINE</div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     YOUR PAGE CONTENT GOES HERE
+     Use .si wrapper for max-width 1280px centered sections
+     ============================================================ -->
+<section style="background: var(--navy2);">
+  <div class="si">
+
+    <div class="eye">EYEBROW TEXT</div>
+    <h2 class="st">SECTION HEADING <span class="gd">GOLD WORD</span></h2>
+    <div class="bar"></div>
+
+    <p style="color: var(--text); font-size: 15px; line-height: 1.8;">
+      Your page content goes here. Replace this paragraph with real content.
+    </p>
+
+  </div>
+</section>
+
+
+<!-- ============================================================
+     OPTIONAL CTA BAND — use on most pages
+     ============================================================ -->
+<div class="cta-band">
+  <h2>CTA HEADLINE</h2>
+  <p>Supporting sentence encouraging action.</p>
+  <a href="tel:PHONENUMBER" class="btn-dark">📞 Call PHONE</a>
+  <a href="index.html#quote" class="btn-dark">Get a Free Quote</a>
+</div>
+
+
+<!-- ============================================================
+     TEMPLATE BLOCK START — FOOTER
+     Swap: STORE NAME, LEGAL NAME, TAGLINE, ABOUT TEXT,
+           PHONE, ADDRESS, FFL NUMBER (remove if not firearms)
+     ============================================================ -->
+<footer role="contentinfo">
+  <div class="fi3">
+    <div class="fg2">
+      <div>
+        <div class="fl2">STORE <span>NAME</span></div>
+        <div class="ftag">LEGAL ENTITY NAME</div>
+        <p class="fab">SHORT ABOUT TEXT — city, county, years open, what you do.</p>
+        <div class="fsoc">
+          <a href="INSTAGRAM_URL" class="sb2" aria-label="Instagram">📷</a>
+          <a href="FACEBOOK_URL" class="sb2" aria-label="Facebook" style="font-weight:700;font-size:15px">f</a>
+        </div>
+      </div>
+      <div class="fc">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="vault-howpawning.html">Pawning</a></li>
+          <li><a href="sell.html">Sell an Item</a></li>
+          <li><a href="https://www.ebay.com/usr/bethelpawn" target="_blank" rel="noopener">Shop on eBay</a></li>
+          <li><a href="sell-firearms.html">Firearms</a></li>
+          <li><a href="sell-firearms.html">FFL Transfers</a></li>
+        </ul>
+      </div>
+      <div class="fc">
+        <h4>We Buy</h4>
+        <ul>
+          <li><a href="jewelry.html">Gold &amp; Jewelry</a></li>
+          <li><a href="sell-tools.html">Tools</a></li>
+          <li><a href="sell-electronics.html">Electronics</a></li>
+          <li><a href="sell-firearms.html">Firearms</a></li>
+          <li><a href="sell-instruments.html">Instruments</a></li>
+        </ul>
+      </div>
+      <div class="fc">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">Our Story</a></li>
+          <li><a href="about.html">Meet the Team</a></li>
+          <li><a href="faq.html">FAQs</a></li>
+          <li><a href="vault.html">The Pawn Vault</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="fbot">
+      <p>© 2026 STORE NAME &nbsp;·&nbsp; ADDRESS, CITY, STATE ZIP &nbsp;·&nbsp; PHONE</p>
+      <div class="fbr">
+        <!-- REMOVE the FFL line below if client is not a firearms dealer -->
+        <span class="ffl-txt">Licensed Pawnbroker &nbsp;·&nbsp; FFL #FFL-NUMBER &nbsp;·&nbsp; COUNTY, STATE</span>
+        <span class="fcr">Site by <a href="https://pawngorillas.com" target="_blank" rel="noopener">Pawn Gorillas</a></span>
+      </div>
+    </div>
+  </div>
+</footer>
+<!-- ============================================================
+     TEMPLATE BLOCK END — FOOTER
+     ============================================================ -->
+
+</body>
+</html>
