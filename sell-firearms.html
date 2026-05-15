@@ -123,12 +123,62 @@ footer{background:#040a10;border-top:2px solid var(--gold);padding:50px 20px 0}
 .bsub:hover{background:var(--gold2)}
 @media(max-width:900px){.content-g{grid-template-columns:1fr}.qg{grid-template-columns:1fr}.fg2{grid-template-columns:1fr 1fr}}
 @media(max-width:500px){.buy-grid{grid-template-columns:1fr}.frow{grid-template-columns:1fr}.fg2{grid-template-columns:1fr}}
+/* MOBILE NAV */
+.hamburger{display:none;flex-direction:column;justify-content:center;gap:5px;background:none;border:none;cursor:pointer;padding:8px;margin-left:auto}
+.hamburger span{display:block;width:24px;height:2px;background:var(--white);transition:all 0.3s}
+.mobile-nav{display:none;position:fixed;inset:0;background:rgba(8,15,26,0.97);z-index:999;flex-direction:column;padding:24px 20px;overflow-y:auto}
+.mobile-nav.open{display:flex}
+.mobile-nav-close{align-self:flex-end;background:none;border:none;color:var(--white);font-size:28px;cursor:pointer;padding:4px 8px;margin-bottom:20px}
+.mobile-nav a,.mobile-nav button.mn-toggle{display:block;width:100%;text-align:left;font-family:'Oswald',sans-serif;font-size:18px;letter-spacing:1px;text-transform:uppercase;color:var(--white);padding:14px 0;border-bottom:1px solid rgba(255,255,255,0.08);background:none;border-top:none;border-left:none;border-right:none;cursor:pointer}
+.mobile-nav a:hover,.mobile-nav button.mn-toggle:hover{color:var(--gold)}
+.mobile-nav .mn-sub{display:none;flex-direction:column;padding:0 0 0 16px}
+.mobile-nav .mn-sub.open{display:flex}
+.mobile-nav .mn-sub a{font-size:15px;color:var(--text);padding:10px 0;border-bottom:1px solid rgba(255,255,255,0.05)}
+.mobile-nav .mn-sub a:hover{color:var(--gold)}
+.mobile-nav .mn-cta{color:var(--gold)!important}
+.mobile-nav-phone{display:block;background:var(--gold);color:var(--navy);text-align:center;padding:16px;font-family:'Oswald',sans-serif;font-size:18px;font-weight:700;letter-spacing:1px;margin-top:20px}
+@media(max-width:800px){.hamburger{display:flex}.nav-phone{display:none}}
 </style>
 </head>
 <body>
 <h2 class="sr-only">Sell or Pawn a Firearm at Bethel Pawn — FFL Licensed Dealer in Bethel, Ohio</h2>
 <div class="topbar"><div class="topbar-inner"><div class="topbar-left"><span>📍 119 W. Plane St, Bethel, OH 45106</span><span>📞 (513) 427-4705</span><span>🕐 Tue–Fri 10–5 · Sat 10–2 · Sun–Mon Closed</span></div><div class="topbar-right"><a href="index.html#quote" class="btn-quote">Get a Quote</a><a href="tel:5134274705" class="btn-call">Call Now</a></div></div></div>
-<nav role="navigation" aria-label="Main navigation"><div class="nav-inner"><div class="logo-wrap"><a href="index.html"><div class="logo-sub">East Side Gold &amp; Coin LLC</div><div class="logo-main">Bethel <span>Pawn</span></div></a></div><div class="nav-links"><div class="nav-item"><a href="index.html">Home</a></div><div class="nav-item"><button>Pawning ▾</button><div class="dd"><a href="vault-howpawning.html">How Pawning Works</a><a href="sell.html">What We Accept</a><a href="vault-howpawning.html">Pawn Terms &amp; Rates</a><a href="index.html#quote" class="dd-cta">→ Start a Pawn</a></div></div><div class="nav-item"><button>Sell an Item ▾</button><div class="dd"><a href="sell-tools.html">Sell Tools</a><a href="sell-electronics.html">Sell Electronics</a><a href="sell-firearms.html">Sell a Firearm</a><a href="sell-instruments.html">Sell Musical Instruments</a><a href="index.html#quote" class="dd-cta">→ Get an Offer</a></div></div><div class="nav-item active"><a href="sell-firearms.html">Firearms</a></div><div class="nav-item"><a href="https://www.ebay.com/usr/bethelpawn" target="_blank" rel="noopener">Shop Inventory</a></div><div class="nav-item"><button>The Pawn Vault ▾</button><div class="dd"><a href="vault.html">Pawn Vault Home</a><a href="vault-howpawning.html">How Pawning Works</a><a href="vault-bestitems.html">Best Items to Pawn</a><a href="vault-gold.html">Gold &amp; Precious Metals</a><a href="vault-video.html">Video Library</a></div></div><div class="nav-item"><a href="about.html">About</a></div></div><a href="tel:5134274705" class="nav-phone">📞 (513) 427-4705</a></div></nav>
+<nav role="navigation" aria-label="Main navigation"><div class="nav-inner"><div class="logo-wrap"><a href="index.html"><div class="logo-sub">East Side Gold &amp; Coin LLC</div><div class="logo-main">Bethel <span>Pawn</span></div></a></div><div class="nav-links"><div class="nav-item"><a href="index.html">Home</a></div><div class="nav-item"><button>Pawning ▾</button><div class="dd"><a href="vault-howpawning.html">How Pawning Works</a><a href="sell.html">What We Accept</a><a href="vault-howpawning.html">Pawn Terms &amp; Rates</a><a href="index.html#quote" class="dd-cta">→ Start a Pawn</a></div></div><div class="nav-item"><button>Sell an Item ▾</button><div class="dd"><a href="sell-tools.html">Sell Tools</a><a href="sell-electronics.html">Sell Electronics</a><a href="sell-firearms.html">Sell a Firearm</a><a href="sell-instruments.html">Sell Musical Instruments</a><a href="index.html#quote" class="dd-cta">→ Get an Offer</a></div></div><div class="nav-item active"><a href="sell-firearms.html">Firearms</a></div><div class="nav-item"><a href="https://www.ebay.com/usr/bethelpawn" target="_blank" rel="noopener">Shop Inventory</a></div><div class="nav-item"><button>The Pawn Vault ▾</button><div class="dd"><a href="vault.html">Pawn Vault Home</a><a href="vault-howpawning.html">How Pawning Works</a><a href="vault-bestitems.html">Best Items to Pawn</a><a href="vault-gold.html">Gold &amp; Precious Metals</a><a href="vault-video.html">Video Library</a></div></div><div class="nav-item"><a href="about.html">About</a></div></div><a href="tel:5134274705" class="nav-phone">📞 (513) 427-4705</a><button class="hamburger" aria-label="Open menu" onclick="document.getElementById('mobileNav').classList.add('open')"><span></span><span></span><span></span></button></div></nav>
+
+<!-- MOBILE NAV -->
+<div class="mobile-nav" id="mobileNav" role="dialog" aria-label="Mobile navigation">
+  <button class="mobile-nav-close" onclick="document.getElementById('mobileNav').classList.remove('open')" aria-label="Close menu">✕</button>
+  <a href="index.html">Home</a>
+  <button class="mn-toggle" onclick="this.nextElementSibling.classList.toggle('open')">Pawning ▾</button>
+  <div class="mn-sub">
+    <a href="vault-howpawning.html">How Pawning Works</a>
+    <a href="sell.html">What We Accept</a>
+    <a href="vault-howpawning.html">Pawn Terms &amp; Rates</a>
+    <a href="vault.html">Redeem Your Item</a>
+    <a href="index.html#quote" class="mn-cta">→ Start a Pawn</a>
+  </div>
+  <button class="mn-toggle" onclick="this.nextElementSibling.classList.toggle('open')">Sell an Item ▾</button>
+  <div class="mn-sub">
+    <a href="sell-tools.html">Sell Tools</a>
+    <a href="sell-electronics.html">Sell Electronics</a>
+    <a href="sell-firearms.html">Sell a Firearm</a>
+    <a href="sell-instruments.html">Sell Musical Instruments</a>
+    <a href="index.html#quote" class="mn-cta">→ Get an Offer</a>
+  </div>
+  <a href="sell-firearms.html">Firearms</a>
+  <a href="https://www.ebay.com/usr/bethelpawn" target="_blank" rel="noopener">Shop Inventory</a>
+  <button class="mn-toggle" onclick="this.nextElementSibling.classList.toggle('open')">The Pawn Vault ▾</button>
+  <div class="mn-sub">
+    <a href="vault.html">Pawn Vault Home</a>
+    <a href="vault-howpawning.html">How Pawning Works</a>
+    <a href="vault-bestitems.html">Best Items to Pawn</a>
+    <a href="vault-gold.html">Gold &amp; Precious Metals</a>
+    <a href="vault-video.html">Video Library</a>
+  </div>
+  <a href="about.html">About</a>
+  <a href="contact.html">Contact</a>
+  <a href="tel:5134274705" class="mobile-nav-phone">📞 (513) 427-4705</a>
+</div>
 
 <section class="page-hero"><div class="ph-bg" role="img" aria-label="Firearms at Bethel Pawn"></div><div class="ph-ov" aria-hidden="true"></div><div class="ph-content"><div class="breadcrumb"><a href="index.html">Home</a><span>›</span><a href="sell.html">Sell an Item</a><span>›</span>Firearms</div><h1>Sell or Pawn<span class="gd">a Firearm</span></h1><div class="ph-sub">FFL Licensed · Cash on the Spot · All Transactions Legal &amp; Compliant</div><div class="ffl-badge">🛡️ <span>FFL License #4-31-0339 — Federally Licensed Firearms Dealer</span></div></div></section>
 
