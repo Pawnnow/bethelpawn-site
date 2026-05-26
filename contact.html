@@ -19,8 +19,8 @@ body{font-family:'Open Sans',sans-serif;background:var(--navy);color:var(--white
 a{text-decoration:none;color:inherit}
 .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0}
 /* TEMPLATE */
-.topbar{background:#080f1a;padding:8px 0;font-size:13px;border-bottom:1px solid rgba(200,146,42,0.3)}
-.topbar-inner{max-width:1280px;margin:0 auto;padding:0 20px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px}
+.topbar{background:#080f1a;padding:8px 0;font-size:13px;border-bottom:1px solid rgba(200,146,42,0.3);position:relative}
+.topbar-inner{max-width:1280px;margin:0 auto;padding:0 20px 0 220px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px}
 .topbar-left{display:flex;align-items:center;gap:20px;flex-wrap:wrap}
 .topbar-left span{display:flex;align-items:center;gap:6px;color:var(--light)}
 .topbar-right{display:flex;gap:10px}
@@ -29,8 +29,8 @@ a{text-decoration:none;color:inherit}
 .btn-call{background:var(--gold);color:var(--navy);padding:6px 18px;font-size:12px;font-family:'Oswald',sans-serif;letter-spacing:1px;text-transform:uppercase;font-weight:700;transition:all 0.2s;display:inline-block}
 .btn-call:hover{background:var(--gold2)}
 nav{background:var(--navy2);border-bottom:2px solid var(--gold);position:sticky;top:0;z-index:100}
-.nav-inner{max-width:1280px;margin:0 auto;padding:0 20px;display:flex;align-items:stretch}
-.logo-wrap{display:flex;align-items:center;padding:10px 20px 10px 0;border-right:1px solid rgba(255,255,255,0.1);margin-right:10px}
+.nav-inner{max-width:1280px;margin:0 auto;padding:0 20px 0 210px;display:flex;align-items:stretch}
+.logo-wrap{position:absolute;top:0;left:0;z-index:101;background:#fff;padding:10px 16px;display:flex;align-items:center;justify-content:center;min-height:90px}
 .logo-sub{font-size:10px;color:#aaa;letter-spacing:0.5px}
 .logo-main{font-family:'Oswald',sans-serif;font-size:28px;font-weight:700;color:var(--white);line-height:1}
 .logo-main span{color:var(--brand-red)}
@@ -143,7 +143,7 @@ footer{background:#040a10;border-top:2px solid var(--gold);padding:50px 20px 0}
 .mobile-nav .mn-sub a:hover{color:var(--gold)}
 .mobile-nav .mn-cta{color:var(--gold)!important}
 .mobile-nav-phone{display:block;background:var(--gold);color:var(--navy);text-align:center;padding:16px;font-family:'Oswald',sans-serif;font-size:18px;font-weight:700;letter-spacing:1px;margin-top:20px}
-@media(max-width:800px){.hamburger{display:flex}.nav-phone{display:none}}
+@media(max-width:800px){.hamburger{display:flex}.nav-phone{display:none}.nav-inner{padding-left:150px}.topbar-inner{padding-left:150px}.logo-wrap{padding:5px 8px;min-height:70px}.logo-wrap img{height:65px}}
 </style>
 </head>
 <body>
@@ -151,6 +151,11 @@ footer{background:#040a10;border-top:2px solid var(--gold);padding:50px 20px 0}
 
 <!-- TEMPLATE NAV -->
 <div class="topbar">
+  <div class="logo-wrap">
+    <a href="index.html" aria-label="Bethel Pawn Home">
+      <img src="https://raw.githubusercontent.com/Pawnnow/bethelpawn-site/main/Bethelpawn%20logo.webp" alt="Bethel Pawn — East Side Gold &amp; Coin LLC" style="height:130px;width:auto;display:block;">
+    </a>
+  </div>
   <div class="topbar-inner">
     <div class="topbar-left">
       <span>📍 119 W. Plane St, Bethel, OH 45106</span>
@@ -165,12 +170,6 @@ footer{background:#040a10;border-top:2px solid var(--gold);padding:50px 20px 0}
 </div>
 <nav role="navigation" aria-label="Main navigation">
   <div class="nav-inner">
-    <div class="logo-wrap">
-      <a href="index.html" aria-label="Bethel Pawn Home">
-        <div class="logo-sub">East Side Gold &amp; Coin LLC</div>
-        <div class="logo-main">Bethel <span>Pawn</span></div>
-      </a>
-    </div>
     <div class="nav-links">
       <div class="nav-item"><a href="index.html">Home</a></div>
       <div class="nav-item"><button aria-haspopup="true">Pawning ▾</button><div class="dd"><a href="vault-howpawning.html">How Pawning Works</a><a href="sell.html">What We Accept</a><a href="vault-howpawning.html">Pawn Terms &amp; Rates</a><a href="vault.html">Redeem Your Item</a><a href="index.html#quote" class="dd-cta">→ Start a Pawn</a></div></div>
@@ -335,8 +334,7 @@ footer{background:#040a10;border-top:2px solid var(--gold);padding:50px 20px 0}
   <div class="fi3">
     <div class="fg2">
       <div>
-        <div class="fl2">Bethel <span>Pawn</span></div>
-        <div class="ftag">East Side Gold &amp; Coin LLC</div>
+        <img src="https://raw.githubusercontent.com/Pawnnow/bethelpawn-site/main/Bethelpawn%20logo.webp" alt="Bethel Pawn" style="height:55px;width:auto;display:block;margin-bottom:8px;">
         <p class="fab">Bethel, Ohio's most trusted pawn shop. Family owned and operated since 2013. Proudly serving Bethel, Batavia, Owensville, and all of Clermont County.</p>
         <div class="fsoc">
           <a href="https://www.instagram.com/bethelpawn" class="sb2" aria-label="Instagram">📷</a>
