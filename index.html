@@ -48,7 +48,7 @@ nav{background:var(--navy2);border-bottom:2px solid var(--gold);position:sticky;
 .nav-phone:hover{background:#aa1111}
 .hero{position:relative;min-height:600px;display:flex;align-items:flex-end;overflow:hidden}
 .hero-bg{position:absolute;inset:0;background-image:url('https://raw.githubusercontent.com/Pawnnow/bethelpawn-site/main/Exterior.jpg');background-size:cover;background-position:center;opacity:0.85}
-.hero-ov{position:absolute;inset:0;background:linear-gradient(to right,rgba(8,15,26,0.72) 45%,rgba(8,15,26,0.05))}
+.hero-ov{position:absolute;inset:0;background:linear-gradient(to right,rgba(8,15,26,0.60) 40%,rgba(8,15,26,0.0))}
 .hero-content{position:relative;max-width:1280px;margin:0 auto;padding:60px 20px 80px;width:100%}
 .hero-eye{font-family:'Oswald',sans-serif;font-size:13px;letter-spacing:4px;color:var(--gold);text-transform:uppercase;display:flex;align-items:center;gap:12px;margin-bottom:20px}
 .hero-eye:before{content:'';display:block;width:40px;height:2px;background:var(--gold)}
@@ -78,7 +78,7 @@ section{padding:80px 20px}
 .ac{position:relative;overflow:hidden;cursor:pointer;aspect-ratio:4/3;display:block;text-decoration:none}
 .ac img{width:100%;height:100%;object-fit:cover;transition:transform 0.4s}
 .ac:hover img{transform:scale(1.07)}
-.ac-ov{position:absolute;inset:0;background:linear-gradient(to top,rgba(8,15,26,0.9) 0%,rgba(8,15,26,0.05) 60%);display:flex;flex-direction:column;justify-content:flex-end;padding:16px}
+.ac-ov{position:absolute;inset:0;background:linear-gradient(to top,rgba(8,15,26,0.85) 0%,rgba(8,15,26,0.0) 50%);display:flex;flex-direction:column;justify-content:flex-end;padding:16px}
 .ac h3{font-family:'Oswald',sans-serif;font-size:16px;font-weight:600;text-transform:uppercase;color:var(--white);margin-bottom:4px}
 .ac p{font-size:11px;color:var(--text);line-height:1.4}
 .ac-np{background:var(--navy3);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;padding:20px;text-align:center}
@@ -363,13 +363,13 @@ footer{background:#040a10;border-top:2px solid var(--gold);padding:50px 20px 0}
       <a href="sell-firearms.html" class="ac"><img src="https://raw.githubusercontent.com/Pawnnow/bethelpawn-site/main/Guns03.jpg" alt="Firearms" loading="lazy"><div class="ac-ov"><h3>Firearms</h3><p>Handguns, rifles, shotguns, ammo &amp; accessories. FFL licensed, fully compliant.</p></div></a>
       <a href="jewelry.html" class="ac"><img src="https://raw.githubusercontent.com/Pawnnow/bethelpawn-site/main/Gold.jpg" alt="Gold and scrap gold" loading="lazy"><div class="ac-ov"><h3>Gold &amp; Scrap Gold</h3><p>10k, 14k, 18k, 24k — we test &amp; pay top dollar based on live spot price.</p></div></a>
       <a href="jewelry.html" class="ac"><img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?w=600&q=80" alt="Jewelry and diamonds" loading="lazy"><div class="ac-ov"><h3>Jewelry &amp; Diamonds</h3><p>Gold, silver, diamonds, luxury watches &amp; fine accessories.</p></div></a>
-      <a href="jewelry.html" class="ac"><img src="https://raw.githubusercontent.com/Pawnnow/bethelpawn-site/main/Coins.jpg" alt="Coins and bullion" loading="lazy"><div class="ac-ov"><h3>Coins &amp; Bullion</h3><p>Morgan dollars, silver rounds, gold coins, bullion bars &amp; currency collections.</p></div></a>
-      <a href="sell-tools.html" class="ac"><img src="https://images.unsplash.com/photo-1504148455328-c376907d081c?w=600&q=80" alt="Power tools" loading="lazy"><div class="ac-ov"><h3>Power Tools</h3><p>Milwaukee, DeWalt, Snap-On, Makita &amp; other quality brands.</p></div></a>
+      <a href="jewelry.html#coins" class="ac"><img src="https://raw.githubusercontent.com/Pawnnow/bethelpawn-site/main/Coins.jpg" alt="Coins and bullion" loading="lazy"><div class="ac-ov"><h3>Coins &amp; Bullion</h3><p>Morgan dollars, silver rounds, gold coins, bullion bars &amp; currency collections.</p></div></a>
+      <a href="sell-tools.html" class="ac"><img src="https://raw.githubusercontent.com/Pawnnow/bethelpawn-site/main/tools.JPG" alt="Power tools" loading="lazy"><div class="ac-ov"><h3>Power Tools</h3><p>Milwaukee, DeWalt, Snap-On, Makita &amp; other quality brands.</p></div></a>
       <a href="sell-electronics.html" class="ac"><img src="https://images.unsplash.com/photo-1593642632559-0c6d3fc62b89?w=600&q=80" alt="Electronics" loading="lazy"><div class="ac-ov"><h3>Electronics</h3><p>Laptops, phones, tablets, gaming consoles &amp; audio gear.</p></div></a>
       <a href="sell-instruments.html" class="ac"><img src="https://raw.githubusercontent.com/Pawnnow/bethelpawn-site/main/musical-instruments.jpg" alt="Musical instruments" loading="lazy"><div class="ac-ov"><h3>Musical Instruments</h3><p>Guitars, amps, keyboards, drums &amp; recording equipment.</p></div></a>
       <a href="sell-sporting.html" class="ac"><img src="https://raw.githubusercontent.com/Pawnnow/bethelpawn-site/main/Sporting%20goods.png" alt="Sporting goods" loading="lazy" style="background:#0d1b2a"><div class="ac-ov"><h3>Sporting Goods</h3><p>Hunting gear, fishing equipment, archery &amp; outdoor equipment.</p></div></a>
       <a href="sell.html" class="ac"><img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=600&q=80" alt="Luxury items" loading="lazy"><div class="ac-ov"><h3>Luxury Items</h3><p>Designer bags, sneakers, collectibles &amp; memorabilia.</p></div></a>
-      <a href="sell-videogames.html" class="ac"><img src="https://images.unsplash.com/photo-1486401899868-0e435ed85128?w=600&q=80" alt="Video games and consoles" loading="lazy"><div class="ac-ov"><h3>Video Games &amp; Consoles</h3><p>PS4, PS5, Xbox, Nintendo Switch, games &amp; accessories.</p></div></a>
+      <a href="sell-videogames.html" class="ac"><img src="https://raw.githubusercontent.com/Pawnnow/bethelpawn-site/main/PS5.jpg" alt="Video games and consoles" loading="lazy"><div class="ac-ov"><h3>Video Games &amp; Consoles</h3><p>PS4, PS5, Xbox, Nintendo Switch, games &amp; accessories.</p></div></a>
       <div class="ac ac-np"><div style="font-size:36px" aria-hidden="true">📦</div><h3>And More</h3><p>If it has value, we're interested. Call us or stop in.</p></div>
     </div>
   </div>
@@ -525,6 +525,35 @@ footer{background:#040a10;border-top:2px solid var(--gold);padding:50px 20px 0}
           <tr><td>Tuesday – Friday</td><td>10:00 AM – 5:00 PM</td></tr>
           <tr><td>Saturday</td><td>10:00 AM – 2:00 PM</td></tr>
           <tr><td>Sunday – Monday</td><td>Closed</td></tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="background:#080f1a;padding:0" aria-labelledby="map-h">
+  <div style="display:grid;grid-template-columns:1fr 1fr">
+    <div style="position:relative;min-height:380px">
+      <iframe title="Bethel Pawn location — 119 W. Plane St, Bethel, OH 45106" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3097.3894!2d-84.0834!3d38.9508!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x884066f6b8a4b5b3%3A0xabc123!2sBethel%20Pawn%2C%20119%20W%20Plane%20St%2C%20Bethel%2C%20OH%2045106!5e0!3m2!1sen!2sus!4v1715000000000!5m2!1sen!2sus" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" style="width:100%;height:100%;min-height:380px;border:0;display:block"></iframe>
+    </div>
+    <div style="padding:60px 50px;background:var(--navy2)">
+      <div class="eye">Come See Us</div>
+      <h2 id="map-h" style="font-family:'Oswald',sans-serif;font-size:clamp(28px,3vw,42px);font-weight:700;text-transform:uppercase;color:var(--white);line-height:1.05">Visit <span style="color:var(--gold)">Bethel Pawn</span></h2>
+      <div class="bar"></div>
+      <div style="margin-bottom:20px">
+        <div style="font-family:'Oswald',sans-serif;font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:6px">Address</div>
+        <p style="font-size:15px;color:var(--light);line-height:1.7">119 West Plane St<br>Bethel, OH 45106</p>
+      </div>
+      <div style="margin-bottom:20px">
+        <div style="font-family:'Oswald',sans-serif;font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:6px">Phone</div>
+        <a href="tel:5134274705" style="font-size:18px;color:var(--gold);font-family:'Oswald',sans-serif;font-weight:600;letter-spacing:1px">(513) 427-4705</a>
+      </div>
+      <div>
+        <div style="font-family:'Oswald',sans-serif;font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:8px">Store Hours</div>
+        <table style="width:100%;border-collapse:collapse">
+          <tr><td style="padding:4px 0;font-size:14px;color:var(--light);width:140px">Tuesday – Friday</td><td style="padding:4px 0;font-size:14px;color:var(--text)">10:00 AM – 5:00 PM</td></tr>
+          <tr><td style="padding:4px 0;font-size:14px;color:var(--light)">Saturday</td><td style="padding:4px 0;font-size:14px;color:var(--text)">10:00 AM – 2:00 PM</td></tr>
+          <tr><td style="padding:4px 0;font-size:14px;color:rgba(255,255,255,0.3)">Sunday – Monday</td><td style="padding:4px 0;font-size:14px;color:rgba(255,255,255,0.3)">Closed</td></tr>
         </table>
       </div>
     </div>
