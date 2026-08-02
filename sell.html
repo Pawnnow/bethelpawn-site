@@ -72,8 +72,8 @@ footer{background:#040a10;border-top:2px solid var(--gold);padding:50px 20px 0}
 .fcr a{color:var(--gold)}
 /* PAGE */
 .page-hero{position:relative;min-height:320px;display:flex;align-items:flex-end;overflow:hidden}
-.ph-bg{position:absolute;inset:0;background-image:url('https://raw.githubusercontent.com/Pawnnow/bethelpawn-site/main/Exterior.jpg');background-size:cover;background-position:center;opacity:0.85}
-.ph-ov{position:absolute;inset:0;background:linear-gradient(to right,rgba(8,15,26,0.82) 50%,rgba(8,15,26,0.1))}
+.ph-bg{position:absolute;inset:0;background-image:url('https://raw.githubusercontent.com/Pawnnow/bethelpawn-site/main/Exterior.jpg');background-size:cover;background-position:center;opacity:1.0}
+.ph-ov{position:absolute;inset:0;background:linear-gradient(to right,rgba(8,15,26,0.75) 35%,rgba(8,15,26,0.0) 65%)}
 .ph-content{position:relative;max-width:1280px;margin:0 auto;padding:40px 20px 60px;width:100%}
 .breadcrumb{font-family:'Oswald',sans-serif;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,0.45);margin-bottom:14px}
 .breadcrumb a{color:var(--gold)}
@@ -89,8 +89,8 @@ footer{background:#040a10;border-top:2px solid var(--gold);padding:50px 20px 0}
 .cat-card{position:relative;overflow:hidden;cursor:pointer;aspect-ratio:1;display:block;text-decoration:none}
 .cat-card img{width:100%;height:100%;object-fit:cover;transition:transform 0.4s}
 .cat-card:hover img{transform:scale(1.08)}
-.cat-ov{position:absolute;inset:0;background:linear-gradient(to top,rgba(8,15,26,0.92) 0%,rgba(8,15,26,0.1) 55%);display:flex;flex-direction:column;justify-content:flex-end;padding:18px}
-.cat-card:hover .cat-ov{background:linear-gradient(to top,rgba(8,15,26,0.95) 0%,rgba(8,15,26,0.3) 55%)}
+.cat-ov{position:absolute;inset:0;background:linear-gradient(to top,rgba(5,10,18,0.92) 0%,rgba(5,10,18,0.7) 25%,rgba(5,10,18,0.0) 45%);display:flex;flex-direction:column;justify-content:flex-end;padding:18px}
+.cat-card:hover .cat-ov{background:linear-gradient(to top,rgba(5,10,18,0.95) 0%,rgba(5,10,18,0.8) 30%,rgba(5,10,18,0.0) 50%)}
 .cat-card h3{font-family:'Oswald',sans-serif;font-size:17px;font-weight:600;text-transform:uppercase;color:var(--white);margin-bottom:4px}
 .cat-card p{font-size:12px;color:var(--text);line-height:1.4;margin-bottom:8px}
 .cat-link{font-family:'Oswald',sans-serif;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold)}
@@ -195,12 +195,15 @@ footer{background:#040a10;border-top:2px solid var(--gold);padding:50px 20px 0}
     </div>
     <div class="cat-grid">
       <a href="sell-firearms.html" class="cat-card"><img src="https://raw.githubusercontent.com/Pawnnow/bethelpawn-site/main/Guns03.jpg" alt="Firearms"><div class="cat-ov"><h3>Firearms</h3><p>Handguns, rifles, shotguns, ammo &amp; accessories.</p><span class="cat-link">Learn More →</span></div></a>
-      <a href="jewelry.html" class="cat-card"><img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?w=600&q=80" alt="Gold and jewelry"><div class="cat-ov"><h3>Gold &amp; Jewelry</h3><p>Gold, silver, diamonds, coins &amp; bullion.</p><span class="cat-link">Learn More →</span></div></a>
-      <a href="sell-tools.html" class="cat-card"><img src="https://raw.githubusercontent.com/Pawnnow/bethelpawn-site/main/tools.JPG" alt="Power tools" style="object-fit:contain;object-position:center;background:#0d1b2a;padding:8px"><div class="cat-ov"><h3>Power Tools</h3><p>Milwaukee, DeWalt, Snap-On &amp; more.</p><span class="cat-link">Learn More →</span></div></a>
+      <a href="jewelry.html" class="cat-card"><img src="https://raw.githubusercontent.com/Pawnnow/bethelpawn-site/main/Gold.jpg" alt="Gold and scrap gold"><div class="cat-ov"><h3>Gold &amp; Scrap Gold</h3><p>10k, 14k, 18k, 24k — live spot price.</p><span class="cat-link">Learn More →</span></div></a>
+      <a href="jewelry.html" class="cat-card"><img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?w=600&q=80" alt="Jewelry and diamonds"><div class="cat-ov"><h3>Jewelry &amp; Diamonds</h3><p>Gold, silver, diamonds &amp; luxury watches.</p><span class="cat-link">Learn More →</span></div></a>
+      <a href="jewelry.html" class="cat-card"><img src="https://raw.githubusercontent.com/Pawnnow/bethelpawn-site/main/Coins.jpg" alt="Coins and bullion"><div class="cat-ov"><h3>Coins &amp; Bullion</h3><p>Morgan dollars, silver rounds, gold coins &amp; bullion.</p><span class="cat-link">Learn More →</span></div></a>
+      <a href="sell-tools.html" class="cat-card"><img src="https://raw.githubusercontent.com/Pawnnow/bethelpawn-site/main/tools.JPG" alt="Power tools" style="object-fit:cover;object-position:center;transform:scale(1.4);background:#0d1b2a"><div class="cat-ov"><h3>Power Tools</h3><p>Milwaukee, DeWalt, Snap-On &amp; more.</p><span class="cat-link">Learn More →</span></div></a>
       <a href="sell-electronics.html" class="cat-card"><img src="https://images.unsplash.com/photo-1593642632559-0c6d3fc62b89?w=600&q=80" alt="Electronics"><div class="cat-ov"><h3>Electronics</h3><p>Laptops, phones, tablets &amp; gaming gear.</p><span class="cat-link">Learn More →</span></div></a>
       <a href="sell-instruments.html" class="cat-card"><img src="https://raw.githubusercontent.com/Pawnnow/bethelpawn-site/main/musical-instruments.jpg" alt="Musical instruments"><div class="cat-ov"><h3>Musical Instruments</h3><p>Guitars, amps, keyboards &amp; more.</p><span class="cat-link">Learn More →</span></div></a>
       <a href="sell-sporting.html" class="cat-card"><img src="https://raw.githubusercontent.com/Pawnnow/bethelpawn-site/main/Sporting%20goods.png" alt="Sporting goods" style="background:#0d1b2a"><div class="cat-ov"><h3>Sporting Goods</h3><p>Hunting, fishing, archery &amp; outdoor gear.</p><span class="cat-link">Learn More →</span></div></a>
-      <a href="sell-videogames.html" class="cat-card"><img src="https://raw.githubusercontent.com/Pawnnow/bethelpawn-site/main/PS5.jpg" alt="Video games" style="object-fit:cover;object-position:center top"><div class="cat-ov"><h3>Video Games</h3><p>PS4, PS5, Xbox, Switch &amp; accessories.</p><span class="cat-link">Learn More →</span></div></a>
+      <a href="sell-videogames.html" class="cat-card"><img src="https://raw.githubusercontent.com/Pawnnow/bethelpawn-site/main/PS5.jpg" alt="Video games" style="object-fit:cover;object-position:center top"><div class="cat-ov"><h3>Video Games &amp; Consoles</h3><p>PS4, PS5, Xbox, Switch &amp; accessories.</p><span class="cat-link">Learn More →</span></div></a>
+      <a href="sell.html" class="cat-card"><img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=600&q=80" alt="Luxury items"><div class="cat-ov"><h3>Luxury Items</h3><p>Designer bags, sneakers &amp; collectibles.</p><span class="cat-link">Learn More →</span></div></a>
       <a href="index.html#quote" class="cat-card no-img"><div class="ico" aria-hidden="true">📦</div><h3>And More</h3><p>If it has value, bring it in. We'll make you an offer.</p></a>
     </div>
   </div>
