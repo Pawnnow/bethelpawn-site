@@ -47,8 +47,8 @@ nav{background:var(--navy2);border-bottom:2px solid var(--gold);position:sticky;
 .nav-phone{margin-left:auto;display:flex;align-items:center;background:#cc2222;padding:0 18px;font-family:'Oswald',sans-serif;font-size:15px;font-weight:600;letter-spacing:1px}
 .nav-phone:hover{background:#aa1111}
 .hero{position:relative;min-height:600px;display:flex;align-items:flex-end;overflow:hidden}
-.hero-bg{position:absolute;inset:0;background-image:url('https://raw.githubusercontent.com/Pawnnow/bethelpawn-site/main/Exterior.jpg');background-size:cover;background-position:center;opacity:0.85}
-.hero-ov{position:absolute;inset:0;background:linear-gradient(to right,rgba(8,15,26,0.60) 40%,rgba(8,15,26,0.0))}
+.hero-bg{position:absolute;inset:0;background-image:url('https://raw.githubusercontent.com/Pawnnow/bethelpawn-site/main/Exterior.jpg');background-size:cover;background-position:center;opacity:1.0}
+.hero-ov{position:absolute;inset:0;background:linear-gradient(to right,rgba(8,15,26,0.75) 35%,rgba(8,15,26,0.0) 65%)}
 .hero-content{position:relative;max-width:1280px;margin:0 auto;padding:60px 20px 80px;width:100%}
 .hero-eye{font-family:'Oswald',sans-serif;font-size:13px;letter-spacing:4px;color:var(--gold);text-transform:uppercase;display:flex;align-items:center;gap:12px;margin-bottom:20px}
 .hero-eye:before{content:'';display:block;width:40px;height:2px;background:var(--gold)}
@@ -75,10 +75,9 @@ section{padding:80px 20px}
 .ac-intro{max-width:560px;margin-bottom:36px}
 .ac-intro p{color:var(--text);line-height:1.7;font-size:15px}
 .ac-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:2px}
-.ac{position:relative;overflow:hidden;cursor:pointer;aspect-ratio:4/3;display:block;text-decoration:none}
-.ac img{width:100%;height:100%;object-fit:cover;transition:transform 0.4s}
+.ac{position:relative;overflow:hidden;cursor:pointer;aspect-ratio:4/3;display:block;text-decoration:none}.ac img{width:100%;height:100%;object-fit:cover;object-position:center;display:block;transition:transform 0.4s}.ac:hover img{transform:scale(1.05)}
 .ac:hover img{transform:scale(1.07)}
-.ac-ov{position:absolute;inset:0;background:linear-gradient(to top,rgba(8,15,26,0.85) 0%,rgba(8,15,26,0.0) 50%);display:flex;flex-direction:column;justify-content:flex-end;padding:16px}
+.ac-ov{position:absolute;inset:0;background:linear-gradient(to top,rgba(5,10,18,0.92) 0%,rgba(5,10,18,0.7) 25%,rgba(5,10,18,0.0) 45%);display:flex;flex-direction:column;justify-content:flex-end;padding:16px}
 .ac h3{font-family:'Oswald',sans-serif;font-size:16px;font-weight:600;text-transform:uppercase;color:var(--white);margin-bottom:4px}
 .ac p{font-size:11px;color:var(--text);line-height:1.4}
 .ac-np{background:var(--navy3);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;padding:20px;text-align:center}
@@ -364,12 +363,12 @@ footer{background:#040a10;border-top:2px solid var(--gold);padding:50px 20px 0}
       <a href="jewelry.html" class="ac"><img src="https://raw.githubusercontent.com/Pawnnow/bethelpawn-site/main/Gold.jpg" alt="Gold and scrap gold" loading="lazy"><div class="ac-ov"><h3>Gold &amp; Scrap Gold</h3><p>10k, 14k, 18k, 24k — we test &amp; pay top dollar based on live spot price.</p></div></a>
       <a href="jewelry.html" class="ac"><img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?w=600&q=80" alt="Jewelry and diamonds" loading="lazy"><div class="ac-ov"><h3>Jewelry &amp; Diamonds</h3><p>Gold, silver, diamonds, luxury watches &amp; fine accessories.</p></div></a>
       <a href="jewelry.html#coins" class="ac"><img src="https://raw.githubusercontent.com/Pawnnow/bethelpawn-site/main/Coins.jpg" alt="Coins and bullion" loading="lazy"><div class="ac-ov"><h3>Coins &amp; Bullion</h3><p>Morgan dollars, silver rounds, gold coins, bullion bars &amp; currency collections.</p></div></a>
-      <a href="sell-tools.html" class="ac"><img src="https://raw.githubusercontent.com/Pawnnow/bethelpawn-site/main/tools.JPG" alt="Power tools" loading="lazy"><div class="ac-ov"><h3>Power Tools</h3><p>Milwaukee, DeWalt, Snap-On, Makita &amp; other quality brands.</p></div></a>
+      <a href="sell-tools.html" class="ac"><img src="https://raw.githubusercontent.com/Pawnnow/bethelpawn-site/main/tools.JPG" alt="Power tools" loading="lazy" style="object-fit:contain;object-position:center;background:#0d1b2a;padding:10px"><div class="ac-ov"><h3>Power Tools</h3><p>Milwaukee, DeWalt, Snap-On, Makita &amp; other quality brands.</p></div></a>
       <a href="sell-electronics.html" class="ac"><img src="https://images.unsplash.com/photo-1593642632559-0c6d3fc62b89?w=600&q=80" alt="Electronics" loading="lazy"><div class="ac-ov"><h3>Electronics</h3><p>Laptops, phones, tablets, gaming consoles &amp; audio gear.</p></div></a>
       <a href="sell-instruments.html" class="ac"><img src="https://raw.githubusercontent.com/Pawnnow/bethelpawn-site/main/musical-instruments.jpg" alt="Musical instruments" loading="lazy"><div class="ac-ov"><h3>Musical Instruments</h3><p>Guitars, amps, keyboards, drums &amp; recording equipment.</p></div></a>
       <a href="sell-sporting.html" class="ac"><img src="https://raw.githubusercontent.com/Pawnnow/bethelpawn-site/main/Sporting%20goods.png" alt="Sporting goods" loading="lazy" style="background:#0d1b2a"><div class="ac-ov"><h3>Sporting Goods</h3><p>Hunting gear, fishing equipment, archery &amp; outdoor equipment.</p></div></a>
       <a href="sell.html" class="ac"><img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=600&q=80" alt="Luxury items" loading="lazy"><div class="ac-ov"><h3>Luxury Items</h3><p>Designer bags, sneakers, collectibles &amp; memorabilia.</p></div></a>
-      <a href="sell-videogames.html" class="ac"><img src="https://raw.githubusercontent.com/Pawnnow/bethelpawn-site/main/PS5.jpg" alt="Video games and consoles" loading="lazy"><div class="ac-ov"><h3>Video Games &amp; Consoles</h3><p>PS4, PS5, Xbox, Nintendo Switch, games &amp; accessories.</p></div></a>
+      <a href="sell-videogames.html" class="ac"><img src="https://raw.githubusercontent.com/Pawnnow/bethelpawn-site/main/PS5.jpg" alt="Video games and consoles" loading="lazy" style="object-fit:cover;object-position:center top"><div class="ac-ov"><h3>Video Games &amp; Consoles</h3><p>PS4, PS5, Xbox, Nintendo Switch, games &amp; accessories.</p></div></a>
       <div class="ac ac-np"><div style="font-size:36px" aria-hidden="true">📦</div><h3>And More</h3><p>If it has value, we're interested. Call us or stop in.</p></div>
     </div>
   </div>
