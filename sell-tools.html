@@ -79,10 +79,17 @@ footer{background:#040a10;border-top:2px solid var(--gold);padding:50px 20px 0}
 .content-sec{background:var(--navy2)}
 .content-g{display:grid;grid-template-columns:1fr 360px;gap:60px;align-items:start}
 .content-body p{color:var(--text);font-size:15px;line-height:1.8;margin-bottom:16px}
-.wwb h3{font-family:'Oswald',sans-serif;font-size:18px;letter-spacing:1px;text-transform:uppercase;color:var(--white);margin:28px 0 16px;padding-bottom:10px;border-bottom:1px solid rgba(200,146,42,0.3)}
-.buy-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
-.buy-item{background:var(--navy3);border:1px solid rgba(200,146,42,0.15);padding:11px 15px;display:flex;align-items:center;gap:8px;font-family:'Oswald',sans-serif;font-size:13px;letter-spacing:0.8px;text-transform:uppercase;color:var(--white)}
-.buy-item:before{content:'';width:6px;height:6px;background:var(--gold);border-radius:50%;flex-shrink:0}
+.wwb h3{font-family:'Oswald',sans-serif;font-size:22px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--white);margin:32px 0 20px;padding-bottom:10px;border-bottom:2px solid rgba(200,146,42,0.3)}
+.buy-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:3px}
+.buy-card{position:relative;overflow:hidden;aspect-ratio:4/3;display:block;text-decoration:none}
+.buy-card img{width:100%;height:100%;object-fit:cover;object-position:center;display:block;transition:transform 0.4s}
+.buy-card:hover img{transform:scale(1.05)}
+.buy-card-ov{position:absolute;inset:0;background:linear-gradient(to top,rgba(5,10,18,0.92) 0%,rgba(5,10,18,0.7) 25%,rgba(5,10,18,0.0) 45%);display:flex;flex-direction:column;justify-content:flex-end;padding:14px}
+.buy-card h3{font-family:'Oswald',sans-serif;font-size:16px;font-weight:600;text-transform:uppercase;color:var(--white);margin:0}
+.buy-card-merged{position:relative;overflow:hidden;aspect-ratio:4/3;display:block}
+.buy-card-merged .merged-imgs{display:grid;grid-template-columns:1fr 1fr;height:100%;gap:2px}
+.buy-card-merged .merged-imgs img{width:100%;height:100%;object-fit:cover;object-position:center;display:block}
+.buy-card-merged .buy-card-ov{position:absolute;inset:0;background:linear-gradient(to top,rgba(5,10,18,0.92) 0%,rgba(5,10,18,0.7) 25%,rgba(5,10,18,0.0) 45%);display:flex;flex-direction:column;justify-content:flex-end;padding:14px}
 .sidebar{display:flex;flex-direction:column;gap:18px}
 .side-card{background:var(--navy3);border:1px solid rgba(200,146,42,0.2);padding:22px}
 .side-card h3{font-family:'Oswald',sans-serif;font-size:14px;letter-spacing:1px;text-transform:uppercase;color:var(--white);margin-bottom:12px;padding-bottom:8px;border-bottom:1px solid rgba(200,146,42,0.2)}
@@ -106,7 +113,7 @@ footer{background:#040a10;border-top:2px solid var(--gold);padding:50px 20px 0}
 .fta{resize:vertical;min-height:100px}
 .bsub{background:var(--gold);color:var(--navy);padding:15px 30px;font-family:'Oswald',sans-serif;font-size:15px;font-weight:700;letter-spacing:2px;text-transform:uppercase;border:none;cursor:pointer;transition:all 0.2s;width:100%}
 .bsub:hover{background:var(--gold2)}
-@media(max-width:900px){.content-g,.qg{grid-template-columns:1fr}.fg2{grid-template-columns:1fr 1fr}}
+@media(max-width:900px){.content-g,.qg{grid-template-columns:1fr}.fg2{grid-template-columns:1fr 1fr}.buy-grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:500px){.buy-grid,.frow,.fg2{grid-template-columns:1fr}}
 /* MOBILE NAV */
 .hamburger{display:none;flex-direction:column;justify-content:center;gap:5px;background:none;border:none;cursor:pointer;padding:8px;margin-left:auto}
@@ -175,7 +182,25 @@ footer{background:#040a10;border-top:2px solid var(--gold);padding:50px 20px 0}
       <p>Bethel Pawn buys quality power tools from all major brands. Whether you have a single drill or a full set of Milwaukee tools, bring them in for a free on-the-spot appraisal. We pay based on current market demand and condition.</p>
       <p>We know tools and we know what they're worth. Bring in working or lightly used tools from Milwaukee, DeWalt, Snap-On, Makita, Ryobi, Craftsman, and other quality brands. No appointment needed — walk in and get paid same day.</p>
       <div class="wwb"><h3>What We Accept</h3>
-      <div class="buy-grid"><div class='buy-item'>Milwaukee</div><div class='buy-item'>DeWalt</div><div class='buy-item'>Snap-On</div><div class='buy-item'>Makita</div><div class='buy-item'>Ryobi</div><div class='buy-item'>Craftsman</div><div class='buy-item'>Bosch</div><div class='buy-item'>Ridgid</div><div class='buy-item'>Power Drills</div><div class='buy-item'>Circular Saws</div><div class='buy-item'>Impact Drivers</div><div class='buy-item'>Tool Sets &amp; Chests</div></div></div>
+      <div class="buy-grid">
+        <div class="buy-card"><img src="https://raw.githubusercontent.com/Pawnnow/bethelpawn-site/main/buy-milwaukee.jpg" alt="Milwaukee tools" loading="lazy"><div class="buy-card-ov"><h3>Milwaukee</h3></div></div>
+        <div class="buy-card"><img src="https://raw.githubusercontent.com/Pawnnow/bethelpawn-site/main/buy-dewalt.jpg" alt="DeWalt tools" loading="lazy"><div class="buy-card-ov"><h3>DeWalt</h3></div></div>
+        <div class="buy-card"><img src="https://raw.githubusercontent.com/Pawnnow/bethelpawn-site/main/buy-makita.png" alt="Makita tools" loading="lazy"><div class="buy-card-ov"><h3>Makita</h3></div></div>
+        <div class="buy-card"><img src="https://raw.githubusercontent.com/Pawnnow/bethelpawn-site/main/buy-bosch.jpg" alt="Bosch tools" loading="lazy"><div class="buy-card-ov"><h3>Bosch</h3></div></div>
+        <div class="buy-card"><img src="https://raw.githubusercontent.com/Pawnnow/bethelpawn-site/main/buy-ryobi.jpg" alt="Ryobi tools" loading="lazy"><div class="buy-card-ov"><h3>Ryobi</h3></div></div>
+        <div class="buy-card"><img src="https://raw.githubusercontent.com/Pawnnow/bethelpawn-site/main/buy-craftsman.jpg" alt="Craftsman tools" loading="lazy"><div class="buy-card-ov"><h3>Craftsman</h3></div></div>
+        <div class="buy-card"><img src="https://raw.githubusercontent.com/Pawnnow/bethelpawn-site/main/buy-ridgid.jpg" alt="Ridgid tools" loading="lazy"><div class="buy-card-ov"><h3>Ridgid</h3></div></div>
+        <div class="buy-card"><img src="https://raw.githubusercontent.com/Pawnnow/bethelpawn-site/main/buy-drill.jpg" alt="Power drills" loading="lazy"><div class="buy-card-ov"><h3>Power Drills</h3></div></div>
+        <div class="buy-card"><img src="https://raw.githubusercontent.com/Pawnnow/bethelpawn-site/main/buy-circularsaw.jpg.png" alt="Circular saws" loading="lazy"><div class="buy-card-ov"><h3>Circular Saws</h3></div></div>
+        <div class="buy-card"><img src="https://raw.githubusercontent.com/Pawnnow/bethelpawn-site/main/buy-impact.jpg.jpg" alt="Impact drivers" loading="lazy"><div class="buy-card-ov"><h3>Impact Drivers</h3></div></div>
+        <div class="buy-card-merged">
+          <div class="merged-imgs">
+            <img src="https://raw.githubusercontent.com/Pawnnow/bethelpawn-site/main/buy-tool box.jpg" alt="Tool box" loading="lazy">
+            <img src="https://raw.githubusercontent.com/Pawnnow/bethelpawn-site/main/buy-tool set.jpg" alt="Tool set" loading="lazy">
+          </div>
+          <div class="buy-card-ov"><h3>Tool Sets &amp; Chests</h3></div>
+        </div>
+      </div></div>
     </div>
     <div class="sidebar">
       <div class="side-card"><h3>Get a Quote</h3><p>Tell us about your item and we'll respond fast with a cash offer.</p><a href="#quote" class="btn-p" style="display:block;text-align:center">Get My Free Quote →</a></div>
